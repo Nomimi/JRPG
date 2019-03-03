@@ -4,9 +4,9 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class BaseHero
+public class BaseHero : BaseCharacter
 {
-    public string name;
+    
 
     public float baseHP; //The HP describing the players Healthcondition
     public float curHP;
@@ -22,7 +22,6 @@ public class BaseHero
 
     public int endurance;
     public int intelligence;
-    public int agility;
     public int luck;
 
 }

@@ -326,7 +326,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 91607312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 915291363}
+        m_MethodName: TurnButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &91607312
@@ -872,7 +883,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba417a860bcee774e854783480fc6989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agility: 5
+  charakterName: 
+  characterType: 
+  battleAvatar: {fileID: 21300000, guid: 1999ae33441a3264984680586f8e740e, type: 3}
+  timeTillTurn: 0
+  baseAgility: 0
+  agility: 45
 --- !u!1 &835611943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1045,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba417a860bcee774e854783480fc6989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agility: 8
+  charakterName: 
+  characterType: 
+  battleAvatar: {fileID: 21300000, guid: 0e5b32311cf7e614b8eb6d679f27776c, type: 3}
+  timeTillTurn: 0
+  baseAgility: 0
+  agility: 30
 --- !u!1 &915291362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1078,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4018d4d0b5e7f864d8611c783d793129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnImages:
+  ticksPerSecond: 10
+  HeroScripts:
+  - {fileID: 1355328541}
+  - {fileID: 2123391595}
+  - {fileID: 821989695}
+  - {fileID: 873852213}
+  turnSprites:
   - {fileID: 1341908840}
   - {fileID: 75398868}
   - {fileID: 2009199286}
@@ -1066,7 +1093,6 @@ MonoBehaviour:
   - {fileID: 4091479}
   - {fileID: 1113293936}
   - {fileID: 835611944}
-  HeroScripts: []
   timeTillTurn: 
 --- !u!4 &915291364
 Transform:
@@ -1406,6 +1432,7 @@ GameObject:
   - component: {fileID: 1355328540}
   - component: {fileID: 1355328539}
   - component: {fileID: 1355328541}
+  - component: {fileID: 1355328542}
   m_Layer: 0
   m_Name: Hero
   m_TagString: PlayerCharacters
@@ -1483,7 +1510,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba417a860bcee774e854783480fc6989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agility: 3
+  charakterName: 
+  characterType: 
+  battleAvatar: {fileID: 21300000, guid: 92fdf148e21dcfe4eb75977e582e3c4e, type: 3}
+  timeTillTurn: 0
+  baseAgility: 0
+  agility: 40
+--- !u!114 &1355328542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355328538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e6fc984bc877b4b88b153b55649ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1568496523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,4 +2038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba417a860bcee774e854783480fc6989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agility: 4
+  charakterName: 
+  characterType: 
+  battleAvatar: {fileID: 21300000, guid: ee0307195ac8fbb45a06bc9b24c6c004, type: 3}
+  timeTillTurn: 0
+  baseAgility: 0
+  agility: 60

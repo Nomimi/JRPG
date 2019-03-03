@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CombatSpells.cs" />
     <Compile Include="Assets\Scripts\BaseCharacter.cs" />
     <Compile Include="Assets\Scripts\BaseEnemy.cs" />
     <Compile Include="Assets\Scripts\BaseHero.cs" />
