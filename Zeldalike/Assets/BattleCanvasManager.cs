@@ -36,7 +36,7 @@ public class BattleCanvasManager : MonoBehaviour {
             {
 
             hppercentage = (BC.curHP / BC.baseHP);
-            img.transform.localScale = new Vector3(hppercentage, 1, 1);
+            //img.transform.localScale = new Vector3(hppercentage, 1, 1);
 
         }
 

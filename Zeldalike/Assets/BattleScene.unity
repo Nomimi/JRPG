@@ -1001,12 +1001,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &584603060 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114813610186076926, guid: eb9f6f3d7048e764fbfea992030f0761,
-    type: 2}
-  m_PrefabInternal: {fileID: 238233468}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &592791473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1074,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 592791473}
   m_CullTransparentMesh: 0
+--- !u!1 &662376856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1669174007186136, guid: eb9f6f3d7048e764fbfea992030f0761,
+    type: 2}
+  m_PrefabInternal: {fileID: 238233468}
 --- !u!1 &666137011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1088,6 @@ GameObject:
   m_Component:
   - component: {fileID: 666137014}
   - component: {fileID: 666137013}
-  - component: {fileID: 666137012}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1097,22 +1095,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &666137012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 666137011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116176ebb3a445149b05d803a4ce3b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  myCharacter: {fileID: 2123391595}
-  mySpriteRenderer: {fileID: 0}
-  img: {fileID: 584603060}
-  hppercentage: 0
 --- !u!114 &666137013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,7 +1106,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6809c55e313354a4b8c9053cbbd02325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myBMSTimeline: {fileID: 0}
+  myBMSTimeline: {fileID: 915291365}
+  healthBar:
+  - {fileID: 662376856}
+  myCharacters:
+  - {fileID: 1355328541}
+  - {fileID: 2123391595}
+  - {fileID: 821989695}
+  - {fileID: 873852213}
+  mySpriteRenderer: {fileID: 0}
+  img: {fileID: 0}
+  hppercentage: 0
 --- !u!4 &666137014
 Transform:
   m_ObjectHideFlags: 0
