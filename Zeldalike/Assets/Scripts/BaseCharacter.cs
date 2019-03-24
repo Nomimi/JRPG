@@ -2,19 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BaseCharacter : MonoBehaviour {
 
     public string charakterName;
     public string characterType;
-    
 
 
+    List<int> AbilityList;
     public Sprite battleAvatar;
-    public int timeTillTurn;
+    public float timeTillTurn;
 
-    public int baseAgility;
-    public int agility;
-    
+    public float baseHP; //The HP describing the players Healthcondition
+    public float curHP;
+
+
+    public float baseStrength;
+    public float curStrength;
+
+    public float baseAgility;
+    public float agility;
+
+    public bool playerCharakter;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +34,12 @@ public class BaseCharacter : MonoBehaviour {
 		
 	}
 
+    void UI_RefreshStatus()
+    {
+
+
+
+    }
 
     void StatusStunned(float ticksToStun)
     {

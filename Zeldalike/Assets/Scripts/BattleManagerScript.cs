@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BattleManagerScript : MonoBehaviour {
 
+
+
+    BMSTimeline myBMSTimeline;
+
     double activeTurn = 0;
-    int time = 0;
+    float time = 0;
 
 
     public float ticksPerSecond = 10.0f;
@@ -13,9 +17,11 @@ public class BattleManagerScript : MonoBehaviour {
 
     public List<BaseCharacter> HeroScripts;
     public List<Image> turnSprites;
+    public List<Image> timeLineSprites;
 
 
-    public List<int> timeTillTurn;
+    public List<float> timeTillTurn;
+    public List<BaseEnemy> Enemys;
 
 
     //Decides if the time counts on, may be used to make it a turn based battle system
@@ -44,7 +50,7 @@ public class BattleManagerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        Timeliner();
     }
 
     void recalculateTurnSprites()
@@ -98,7 +104,7 @@ public class BattleManagerScript : MonoBehaviour {
         //Debug.Log("Its turn: " + activeTurn);
         for (int i = 0; i <= HeroScripts.Count-1; i++)
         {
-            Debug.Log(HeroScripts[i].gameObject.name + "is in" + HeroScripts[i].timeTillTurn + "turns");
+            //Debug.Log(HeroScripts[i].gameObject.name + "is in" + HeroScripts[i].timeTillTurn + "turns");
         }
         
     }
@@ -118,7 +124,30 @@ public class BattleManagerScript : MonoBehaviour {
             yield return new WaitForSeconds((1.0f / ticksPerSecond));
             activeTurn++;
             CaclulateWaitingTime();
-            recalculateTurnSprites();
+            //recalculateTurnSprites();
         }
     }
+
+    void Timeliner()
+    {
+
+        for(int i = 0; i < timeLineSprites.Count; i++)
+        {
+         timeLineSprites[i].transform.Translate( new Vector3((HeroScripts[i].agility/10.0f), 0,0));
+
+
+            if (timeLineSprites[i].transform.localPosition.x >= 800)
+            {
+                timeLineSprites[i].transform.localPosition = new Vector3 (-800, 0, 0);
+
+            }
+
+        }
+       
+        
+     
+    }
+
+
+
 }

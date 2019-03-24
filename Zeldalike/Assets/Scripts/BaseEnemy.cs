@@ -5,7 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class BaseEnemy 
 {
+
+    void Start()
+    {
+
+    }
+
+
     public string name;
+    Sprite mySprite;
 
     public enum Type
     {

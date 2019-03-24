@@ -61,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BarHandler.cs" />
+    <Compile Include="Assets\BattleCanvasManager.cs" />
+    <Compile Include="Assets\BMSTimeline.cs" />
     <Compile Include="Assets\CombatSpells.cs" />
     <Compile Include="Assets\Scripts\BaseCharacter.cs" />
     <Compile Include="Assets\Scripts\BaseEnemy.cs" />

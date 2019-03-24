@@ -8,8 +8,7 @@ public class BaseHero : BaseCharacter
 {
     
 
-    public float baseHP; //The HP describing the players Healthcondition
-    public float curHP;
+
 
     public float baseMP;
     public float curMP;
